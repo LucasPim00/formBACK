@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { prisma } from "@/lib/prisma";
+//import { prisma } from "@/lib/prisma";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,13 +12,13 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    const novoLead = await prisma.lead.create({
-      data: { nome, email, observacao, mensagem },
-    });
+//    const novoLead = await prisma.lead.create({
+//      data: { nome, email, observacao, mensagem },
+//    });
 
-    return new Response(JSON.stringify({ success: true, lead: novoLead }), {
-      status: 201,
-    });
+//    return new Response(JSON.stringify({ success: true, lead: novoLead }), {
+//      status: 201,
+//    });
   } catch (error) {
     console.error("Erro ao salvar:", error);
     return new Response(JSON.stringify({ error: "Erro interno do servidor." }), {

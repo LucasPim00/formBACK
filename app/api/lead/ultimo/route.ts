@@ -11,5 +11,5 @@
 
 // Rota desativada temporariamente
 export function GET() {
-  return new Response("Rota inativa", { status: 204 })
+  return new Response("Rota inativa", { status: 200 })
 }
